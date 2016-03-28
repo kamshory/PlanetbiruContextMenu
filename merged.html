@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Merged</title>
+<link rel="stylesheet" type="text/css" href="kamscontextmenu.css">
+<script type="text/javascript" src="kamscontextmenu.js"></script>
+<script type="text/javascript">
+window.onload = function()
+{
+	var menu10 = {'item':[
+		{'text':'New File', 'onclick':function(e){alert('You click New File');e.preventDefault();}, 'class':'file-new'},
+		{'text':'New Project', 'onclick':function(e){alert('You click New Project');e.preventDefault();}, 'class':'file-new'},
+		{'text':'Open File', 'onclick':function(e){alert('You click Open File');e.preventDefault();}, 'class':'file-open'},
+		{'text':'Open Project', 'onclick':function(e){alert('You click Open Project');e.preventDefault();}, 'class':'file-open'},
+		{'text':'Copy', 'onclick':function(e){alert('You click Copy');e.preventDefault();}, 'class':'edit-copy'},
+		{'text':'Cut', 'onclick':function(e){alert('You click Cut');e.preventDefault();}, 'class':'edit-cut'},
+		{'text':'Paste', 'onclick':function(e){alert('You click Paste');e.preventDefault();}, 'class':'edit-paste'},
+		{'text':'Save File', 'onclick':function(e){alert('You click Save File');e.preventDefault();}, 'class':'file-save'},
+		{'text':'Save Project', 'onclick':function(e){alert('You click Save Project');e.preventDefault();}, 'class':'file-save'}
+	]};
+	var el10 = document.getElementsByClassName('context-menu-merged')[0];
+	var cm10 = contextMenu(el10, menu10);
+
+}
+</script>
+<style type="text/css">
+.context-menu-merged, #context-menu{
+	border:1px solid #DDDDDD;
+	width:400px;
+	height:200px;
+	padding:20px;
+	margin-bottom:10px;
+}
+pre{
+	background-color:#FAFAFA;
+	border:1px solid #EEEEEE;
+	padding:10px;
+	overflow:auto;
+}
+
+
+
+#kamscontextmenu ul > li > a{
+background-repeat:no-repeat;
+background-image:url(merged.gif);
+}
+
+#kamscontextmenu ul > li > a.edit-copy{background-position:6px -51px;}
+#kamscontextmenu ul > li > a.copy-dir{background-position:6px -79px;}
+#kamscontextmenu ul > li > a.file-new{background-position:6px -135px;}
+#kamscontextmenu ul > li > a.edit-cut{background-position:6px -163px;}
+#kamscontextmenu ul > li > a.file-save{background-position:6px -219px;}
+#kamscontextmenu ul > li > a.file-open{background-position:6px -443px;}
+#kamscontextmenu ul > li > a.edit-paste{background-position:6px -499px;}
+
+</style>
+
+</head>
+
+<body>
+<div class="context-menu-merged">
+</div>
+</body>
+</html>
